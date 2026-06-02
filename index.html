@@ -505,7 +505,7 @@
                         </div>
                         <div class="col-12 col-md-2">
                             <label style="opacity:0;">.</label>
-                            <button type="button" class="btn-book-now" onclick="handleQuickBookSearch(event)">
+                            <button type="submit" class="btn-book-now">
                                 <i class="fas fa-search"></i> Search
                             </button>
                         </div>
@@ -534,9 +534,7 @@
             sessionStorage.setItem('qb_date', date);
             sessionStorage.setItem('qb_pax', pax);
             
-            // Redirect to auth page instead of booking page directly
-            sessionStorage.setItem('authReturnUrl', 'booking.html');
-            window.location.href = 'auth.html';
+            redirectToAuth('booking.html');
         }
 
         // Set today as min
