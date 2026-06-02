@@ -546,23 +546,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        // Global Auth Redirect Helper
-        function redirectToAuth(returnPage) {
-            sessionStorage.setItem('authReturnUrl', returnPage);
-            window.location.href = 'auth.html';
-        }
-
-        function handleNewsletterSubscribe() {
-            const input = document.getElementById('newsletterEmail');
-            const email = input ? input.value.trim() : '';
-            if (!email || !email.includes('@')) { showToast('Please enter a valid email address.', 'error'); return; }
-            saveSubscriber(email)
-                .then(() => { showToast('You\'re subscribed! ✈️', 'success'); if (input) input.value = ''; })
-                .catch(() => showToast('Subscription failed. Please try again.', 'error'));
-        }
-    </script>
-
     <!-- ========== ADD FLOATING WHATSAPP BUTTON HERE ========== -->
     <style>
         .whatsapp-float {

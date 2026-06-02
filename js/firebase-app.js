@@ -134,6 +134,25 @@ function showToast(message, type = 'success') {
   setTimeout(() => toast.remove(), 4000);
 }
 
+// ── Newsletter helper ───────────────────────────────────────────────────────
+/**
+ * Shared newsletter subscription handler
+ */
+function handleNewsletterSubscribe() {
+  const input = document.getElementById('newsletterEmail');
+  const email = input ? input.value.trim() : '';
+  if (!email || !email.includes('@')) {
+    showToast('Please enter a valid email address.', 'error');
+    return;
+  }
+  saveSubscriber(email)
+    .then(() => {
+      showToast("You're subscribed! ✈️ Welcome to Grand Global Travels.", 'success');
+      if (input) input.value = '';
+    })
+    .catch(() => showToast('Subscription failed. Please try again.', 'error'));
+}
+
 // ── Navigation helper ───────────────────────────────────────────────────────
 /**
  * Redirect to auth page with a return URL.

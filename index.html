@@ -480,7 +480,7 @@
                     <a href="booking.html" class="qb-tab">💼 Business Travel</a>
                 </div>
 
-                <form class="qb-form" onsubmit="quickBookSubmit(event)">
+                <form class="qb-form" onsubmit="handleQuickBookSearch(event)">
                     <div class="row g-3 align-items-end">
                         <div class="col-6 col-md-3">
                             <label><i class="fas fa-plane-departure me-1"></i> From</label>
@@ -515,12 +515,6 @@
         </div>
     </div>
     <script>
-        // Global Auth Redirect Helper
-        function redirectToAuth(returnPage) {
-            sessionStorage.setItem('authReturnUrl', returnPage);
-            window.location.href = 'auth.html';
-        }
-
         // Handle quick book search - validate and redirect to auth
         function handleQuickBookSearch(e) {
             e.preventDefault();
@@ -1201,24 +1195,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     <div class="whatsapp-tooltip">&#128242; Chat with us &bull; Fast reply</div>
-
-    <script>
-        // Newsletter subscribe
-        function handleNewsletterSubscribe() {
-            const input = document.getElementById('newsletterEmail');
-            const email = input ? input.value.trim() : '';
-            if (!email || !email.includes('@')) {
-                showToast('Please enter a valid email address.', 'error');
-                return;
-            }
-            saveSubscriber(email)
-                .then(() => {
-                    showToast('You\'re subscribed! ✈️ Welcome to Grand Global Travels.', 'success');
-                    if (input) input.value = '';
-                })
-                .catch(() => showToast('Subscription failed. Please try again.', 'error'));
-        }
-    </script>
 
 </body>
 
