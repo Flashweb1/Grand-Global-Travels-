@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Presence – Grand Global Travels</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="Grand Global Travels, Lagos Nigeria, Travel Agency, Flight Bookings, Visa Assistance, Luxury Travel, Support"
+        name="keywords">
+    <meta
+        content="Grand Global Travels – serving elite clients from Lagos, Nigeria to worldwide destinations. Contact us for premium travel planning and global support."
+        name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logoicon.png">
+    <link rel="shortcut icon" href="img/logoicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ========== DAMARC signature palette – NO RED, only complementary tones ========== */
+        :root {
+            --gg-navy: #0B1F5B;
+            --gg-gold: #D4AF37;
+            --gg-sand: #f5f0e8;
+            --gg-charcoal: #2c3e4c;
+            --gg-white: #ffffff;
+            /* Aliases for template compatibility */
+            --damarc-teal: #0B1F5B;
+            --damarc-gold: #D4AF37;
+            --damarc-sand: #f5f0e8;
+            --damarc-charcoal: #2c3e4c;
+            --damarc-white: #ffffff;
+        }
+
+        body {
+            color: var(--gg-charcoal);
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Navbar brand */
+        .navbar-brand h1 {
+            color: var(--damarc-teal) !important;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand span {
+            color: var(--damarc-teal);
+        }
+
+        .navbar-brand span:last-child {
+            color: var(--damarc-gold);
+        }
+
+        /* Primary buttons & backgrounds – teal & gold, no red */
+        .btn-primary {
+            background-color: var(--damarc-teal) !important;
+            border-color: var(--damarc-gold) !important;
+            color: white !important;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--damarc-gold) !important;
+            border-color: var(--damarc-teal) !important;
+            color: var(--damarc-teal) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--damarc-teal) !important;
+        }
+
+        .text-secondary,
+        .sub-title,
+        .btn-outline-light:hover i {
+            color: var(--damarc-gold) !important;
+        }
+
+        .border-secondary {
+            border-color: var(--damarc-gold) !important;
+        }
+
+        /* Topbar and footer */
+        .container-fluid.bg-primary {
+            background-color: var(--damarc-teal) !important;
+        }
+
+        .copyright {
+            background: var(--damarc-teal);
+            /* deeper teal */
+        }
+
+        /* Breadcrumb active */
+        .breadcrumb .active {
+            color: var(--damarc-gold) !important;
+        }
+
+        /* Office cards - DAMARC styling */
+        .office-item {
+            background: var(--damarc-white);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(15, 78, 90, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+
+        .office-item:hover {
+            box-shadow: 0 20px 40px rgba(199, 169, 100, 0.15);
+            border-bottom-color: var(--damarc-gold);
+            transform: translateY(-8px);
+        }
+
+        .office-img img {
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .office-item:hover .office-img img {
+            transform: scale(1.02);
+        }
+
+        .office-content h4 {
+            color: var(--damarc-teal);
+            font-weight: 700;
+        }
+
+        .office-content a.text-secondary {
+            color: var(--damarc-gold) !important;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .office-content a.text-secondary:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer headings */
+        .footer h4.text-secondary {
+            color: var(--damarc-gold) !important;
+        }
+
+        /* Navbar active & hover */
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--damarc-gold) !important;
+        }
+
+        /* Dropdown active item */
+        .dropdown-menu .dropdown-item.active {
+            background-color: var(--damarc-teal);
+            color: white !important;
+        }
+
+        .dropdown-menu .dropdown-item.active:hover {
+            background-color: var(--damarc-gold);
+            color: var(--damarc-teal) !important;
+        }
+
+        /* Back to top button */
+        .btn.btn-primary.btn-lg-square {
+            background-color: var(--damarc-teal) !important;
+            border-color: var(--damarc-gold) !important;
+        }
+
+        .btn.btn-primary.btn-lg-square:hover {
+            background-color: var(--damarc-gold) !important;
+            color: var(--damarc-teal) !important;
+        }
+
+        /* Custom breadcrumb background */
+        .bg-breadcrumb {
+            background: linear-gradient(rgba(11, 31, 91, 0.85), rgba(11, 31, 91, 0.85)), url('img/breadcrumb-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 100px;
+            position: relative;
+        }
+
+        /* No red anywhere */
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+                <div class="d-flex">
+                    <a href="mailto:grandglobaltravels@gmail.com" class="text-white me-4"><i
+                            class="fas fa-envelope text-secondary me-2"></i>grandglobaltravels@gmail.com</a>
+                    <a href="tel:+2349035730021" class="text-white me-0"><i
+                            class="fas fa-phone-alt text-secondary me-2"></i>09035730021</a>
+                </div>
+            </div>
+            <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                        href="https://instagram.com/grand_globaltravels" target="_blank"><i
+                            class="fab fa-instagram fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-facebook-f fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-twitter fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle"
+                        href="https://tiktok.com/@grand_globaltravels" target="_blank"><i
+                            class="fab fa-tiktok fw-normal text-secondary"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="service.html" class="text-white me-2"> Services</a><small class="text-white"> / </small>
+                    <a href="about.html" class="text-white mx-2"> About</a><small class="text-white"> / </small>
+                    <a href="contact.html" class="text-white ms-2"> Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/newlogo.png" alt="Grand Global Travels Logo" style="max-height: 50px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">About Us</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="about.html" class="dropdown-item">Our Story</a>
+                            <a href="office.html" class="dropdown-item">Our Offices</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="booking.html"
+                    class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0 ms-lg-3">Book
+                    a Trip</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start - Offices / Presence Hero -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our presence</h3>
+            <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li>
+                <li class="breadcrumb-item active text-secondary">Our presence</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Contact Start – transformed into DAMARC contact hubs / presence -->
+    <div class="container-fluid contact overflow-hidden py-5">
+        <div class="container py-5">
+            <div class="office">
+                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h5 class="sub-title text-primary px-3">CONNECT WITH GRAND GLOBAL</h5>
+                    </div>
+                    <h1 class="display-5 mb-4">We're here for you – anywhere</h1>
+                    <p class="mb-0">Based in Lagos, Nigeria, we serve leisure travelers, business professionals, and
+                        luxury seekers worldwide.
+                        Reach out via phone, email, Instagram, or visit our virtual support hubs.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Phone / Call Hub -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-2.jpg" class="img-fluid w-100 rounded" alt="Call DAMARC">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2"><i class="fas fa-phone-alt text-secondary me-2"></i> Phone</h4>
+                                <a href="tel:+2349035730021" class="text-secondary fs-5 mb-2 fw-bold">09035730021</a>
+                                <p class="text-muted mb-1">Mon–Sat, 9am–7pm (WAT)</p>
+                                <p class="mb-0"><small>WhatsApp available</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Hub -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-1.jpg" class="img-fluid w-100 rounded" alt="Instagram DAMARC">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2"><i class="fab fa-instagram text-secondary me-2"></i> Instagram</h4>
+                                <a href="https://instagram.com/grand_globaltravels" target="_blank"
+                                    class="text-secondary fs-5 mb-2 fw-bold">@grand_globaltravels</a>
+                                <p class="text-muted mb-1">DM for quick inquiries</p>
+                                <p class="mb-0"><small>Stories, updates, travel tips</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email Hub -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-3.jpg" class="img-fluid w-100 rounded" alt="Email DAMARC">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2"><i class="fas fa-envelope text-secondary me-2"></i> Email</h4>
+                                <a href="mailto:grandglobaltravels@gmail.com"
+                                    class="text-secondary fs-5 mb-2 fw-bold text-break">grandglobaltravels@gmail.com</a>
+                                <p class="text-muted mb-1">Itineraries, quotes</p>
+                                <p class="mb-0"><small>Partnerships & groups</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nigeria HQ -->
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-4.jpg" class="img-fluid w-100 rounded" alt="DAMARC Headquarters">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2"><i class="fas fa-map-marker-alt text-secondary me-2"></i> Nigeria (HQ)
+                                </h4>
+                                <p class="fw-bold fs-5 mb-2" style="color: var(--gg-navy);">Lagos, Nigeria</p>
+                                <p class="text-muted mb-1">Serving elite clients worldwide</p>
+                                <p class="mb-0"><small>Virtual consultations</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expanded presence message - we work globally -->
+                <div class="row mt-5 pt-4 g-4">
+                    <div class="col-12">
+                        <div class="p-5 text-center" style="background: var(--damarc-sand); border-radius: 30px;">
+                            <h2 class="mb-4" style="color: var(--damarc-teal);">🌍 No office? No problem.</h2>
+                            <p class="fs-5 mb-3">We are a digital-first travel management company. Whether you're in
+                                Lagos, London, or Los Angeles – we're just a call, DM, or email away.</p>
+                            <div class="d-flex flex-wrap justify-content-center gap-4 mt-4">
+                                <div><i class="fas fa-check-circle text-secondary me-2"></i> 24/7 support</div>
+                                <div><i class="fas fa-check-circle text-secondary me-2"></i> Instant quotes</div>
+                                <div><i class="fas fa-check-circle text-secondary me-2"></i> Video consultations</div>
+                                <div><i class="fas fa-check-circle text-secondary me-2"></i> Global partnerships</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Short footer / flyer version - prominently displayed -->
+                <div class="text-center mt-5 pt-3">
+                    <div class="p-4 mx-auto"
+                        style="background: var(--gg-sand); border-radius: 50px; max-width: 900px; border-left: 5px solid var(--gg-gold);">
+                        <p class="fs-4 fw-bold mb-2" style="color: var(--gg-navy);">Grand Global Travels – Global
+                            Presence</p>
+                        <p class="mb-1 fs-5">
+                            <i class="fas fa-phone-alt text-secondary me-2"></i> 09035730021   |  
+                            <i class="fab fa-instagram text-secondary me-2"></i> @grand_globaltravels   |  
+                            <i class="fas fa-envelope text-secondary me-2"></i> grandglobaltravels@gmail.com
+                        </p>
+                        <p class="mt-3 mb-0">📍 Lagos, Nigeria – serving excellence everywhere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Grand Global Travels</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Lagos, Nigeria – worldwide</a>
+                        <a href="mailto:grandglobaltravels@gmail.com"><i class="fas fa-envelope me-2"></i>
+                            grandglobaltravels@gmail.com</a>
+                        <a href="tel:+2349035730021"><i class="fas fa-phone me-2"></i> 09035730021</a>
+                        <a href="https://instagram.com/grand_globaltravels" target="_blank" class="mb-3"><i
+                                class="fab fa-instagram me-2"></i> @grand_globaltravels</a>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-secondary me-2"></i>
+                            <a class="btn mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn mx-1" href="https://instagram.com/grand_globaltravels"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn mx-1" href="https://tiktok.com/@grand_globaltravels" target="_blank"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Opening hours</h4>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Mon - Friday:</h6>
+                            <p class="text-white mb-0">09.00 am – 07.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Saturday:</h6>
+                            <p class="text-white mb-0">10.00 am – 05.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Sunday:</h6>
+                            <p class="text-white mb-0">Closed (online inquiries welcome)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Our travel solutions</h4>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Application</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Flight Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Hotel Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Travel Packages</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Custom itineraries</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Trip Advisory</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Travel with us</h4>
+                        <p class="text-white mb-3" style="line-height: 1.6;">
+                            <span class="fw-bold">Grand Global Travels</span><br>
+                            &#128222; 09035730021<br>
+                            &#128247; @grand_globaltravels<br>
+                            &#9993; grandglobaltravels@gmail.com
+                        </p>
+                        <div class="position-relative mx-auto rounded-pill">
+                            <input id="newsletterEmail" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="email"
+                                placeholder="Your email for travel inspo">
+                            <button type="button" onclick="handleNewsletterSubscribe()"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="#" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Grand Global Travels</a>, excellence in
+                        every mile.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    &copy; 2026 Grand Global Travels. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- Firebase SDKs (compat v9) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+    <script src="js/firebase-app.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        function handleNewsletterSubscribe() {
+            const input = document.getElementById('newsletterEmail');
+            const email = input ? input.value.trim() : '';
+            if (!email || !email.includes('@')) { showToast('Please enter a valid email address.', 'error'); return; }
+            saveSubscriber(email)
+                .then(() => { showToast('You\'re subscribed! ✈️', 'success'); if (input) input.value = ''; })
+                .catch(() => showToast('Subscription failed. Please try again.', 'error'));
+        }
+    </script>
+
+    <!-- ========== ADD FLOATING WHATSAPP BUTTON HERE ========== -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #0B1F5B;
+            color: white;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #D4AF37;
+            color: #0B1F5B;
+            transform: scale(1.15);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+            animation: none;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 110px;
+            left: 30px;
+            background-color: #0B1F5B;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 1px solid #D4AF37;
+            pointer-events: none;
+        }
+
+        .whatsapp-tooltip:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 25px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: #0B1F5B transparent transparent transparent;
+        }
+
+        .whatsapp-float:hover+.whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 30px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2349035730021?text=Hello%21%20I%27m%20interested%20in%20Grand%20Global%20Travels%20services.%20I%20need%20assistance%20with%3A"
+        class="whatsapp-float" target="_blank" aria-label="Chat with Grand Global Travels on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Tooltip -->
+    <div class="whatsapp-tooltip">
+        📱 Chat with Grand Global • 2 min reply
+    </div>
+    <!-- ========== END WHATSAPP BUTTON CODE ========== -->
+
+</body>
+
+</html>

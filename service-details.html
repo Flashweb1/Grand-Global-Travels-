@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Service Details - Grand Global Travels</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="Grand Global Travels, Visa Packages, Flight Booking, Hotel Booking, Travel Packages, Personalized Itineraries, Private Trips"
+        name="keywords">
+    <meta
+        content="Grand Global Travels – premium travel consultancy offering visa guidance, flight & hotel bookings, curated travel packages, and personalized itineraries worldwide."
+        name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logoicon.png">
+    <link rel="shortcut icon" href="img/logoicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ========== Grand Global Travels – Navy & Gold Palette ========== */
+        :root {
+            --gg-navy: #0B1F5B;
+            /* primary navy */
+            --gg-gold: #D4AF37;
+            /* prestige gold */
+            --gg-navy-deep: #071440;
+            /* deep navy for footer/copyright */
+            --gg-sand: #F5F0E8;
+            /* warm cream background */
+            --gg-charcoal: #1A2340;
+            /* dark text */
+            --gg-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gg-charcoal);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .navbar-brand-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            line-height: 1.2;
+            color: var(--gg-navy);
+        }
+
+        .navbar-brand-text span {
+            color: var(--gg-gold);
+        }
+
+        .btn-primary {
+            background-color: var(--gg-navy) !important;
+            border-color: var(--gg-gold) !important;
+            color: white !important;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gg-gold) !important;
+            border-color: var(--gg-navy) !important;
+            color: var(--gg-navy) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--gg-navy) !important;
+        }
+
+        .text-secondary,
+        .sub-title,
+        .btn-outline-light:hover i {
+            color: var(--gg-gold) !important;
+        }
+
+        .border-secondary {
+            border-color: var(--gg-gold) !important;
+        }
+
+        .container-fluid.bg-primary {
+            background-color: var(--gg-navy) !important;
+        }
+
+        .copyright {
+            background: var(--gg-navy-deep);
+        }
+
+        .service-title-name .bg-primary {
+            background: var(--gg-navy) !important;
+        }
+
+        .service-title-name .bg-primary a {
+            color: white !important;
+        }
+
+        .fa-star,
+        .fas.fa-star,
+        .text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .fa-check-circle.text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .footer h4.text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .footer a,
+        .footer p {
+            transition: 0.2s;
+        }
+
+        .footer a:hover {
+            color: var(--gg-gold) !important;
+        }
+
+        .service-detail-hero {
+            background: linear-gradient(rgba(11, 31, 91, 0.8), rgba(11, 31, 91, 0.8)), url('img/breadcrumb-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 100px;
+            position: relative;
+        }
+
+        .service-detail-hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .service-detail-hero p {
+            color: var(--gg-gold);
+            font-size: 1.2rem;
+        }
+
+        .service-detail-content {
+            padding: 60px 0;
+        }
+
+        .service-detail-image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .service-feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .service-feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-feature-list li:before {
+            content: "✓";
+            color: var(--gg-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .service-cta {
+            background-color: var(--gg-navy);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+
+        .service-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/newlogo.png" alt="Grand Global Travels Logo" style="max-height: 50px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">About Us</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="about.html" class="dropdown-item">Our Story</a>
+                            <a href="office.html" class="dropdown-item">Our Offices</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="booking.html"
+                    class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0 ms-lg-3">Book
+                    a Trip</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Service Details Hero Start -->
+    <div class="service-detail-hero">
+        <div class="container">
+            <div class="text-center">
+                <h1 id="serviceTitle">Service Details</h1>
+                <p id="serviceSubtitle">Discover our premium services</p>
+            </div>
+        </div>
+    </div>
+    <!-- Service Details Hero End -->
+
+    <!-- Service Details Content Start -->
+    <div class="service-detail-content container my-5">
+        <div class="row">
+            <div class="col-lg-6 mb-5">
+                <img id="serviceImage" src="img/service-1.jpg" alt="Service" class="img-fluid service-detail-image">
+            </div>
+            <div class="col-lg-6">
+                <h2 id="serviceHeading" class="mb-4">Service Name</h2>
+                <p id="serviceDescription">Service description will appear here.</p>
+
+                <h4 class="mt-5 mb-3">What We Offer:</h4>
+                <ul class="service-feature-list" id="serviceFeatures">
+                    <li>Premium service feature</li>
+                    <li>Expert assistance</li>
+                    <li>24/7 support</li>
+                </ul>
+
+                <h4 class="mt-5 mb-3">Additional Details:</h4>
+                <p id="serviceDetails">Additional service details will appear here.</p>
+
+                <a href="booking.html" class="btn btn-primary rounded-pill py-3 px-5 mt-4">Book This Service</a>
+            </div>
+        </div>
+    </div>
+    <!-- Service Details Content End -->
+
+    <!-- Service CTA Start -->
+    <div class="service-cta container-fluid">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p class="mb-4" style="color: #ddd;">Contact us today to book your service and experience the Grand Global Travels difference.</p>
+            <a href="contact.html" class="btn btn-outline-light rounded-pill py-3 px-5 me-3">Contact Us</a>
+            <a href="booking.html" class="btn btn-outline-light rounded-pill py-3 px-5">Book Now</a>
+        </div>
+    </div>
+    <!-- Service CTA End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Grand Global Travels</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Lagos, Nigeria &ndash; worldwide</a>
+                        <a href="mailto:grandglobaltravels@gmail.com"><i class="fas fa-envelope me-2"></i>
+                            grandglobaltravels@gmail.com</a>
+                        <a href="tel:+2349035730021"><i class="fas fa-phone me-2"></i> 09035730021</a>
+                        <a href="https://instagram.com/grand_globaltravels" target="_blank" class="mb-3"><i
+                                class="fab fa-instagram me-2"></i> @grand_globaltravels</a>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-secondary me-2"></i>
+                            <a class="btn mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn mx-1" href="https://instagram.com/grand_globaltravels" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn mx-1" href="https://tiktok.com/@grand_globaltravels" target="_blank"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Opening Hours</h4>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Mon &ndash; Friday:</h6>
+                            <p class="text-white mb-0">09.00 am &ndash; 07.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Saturday:</h6>
+                            <p class="text-white mb-0">10.00 am &ndash; 05.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Sunday:</h6>
+                            <p class="text-white mb-0">Closed (online inquiries welcome)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Our Services</h4>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Application</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Flight Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Hotel Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Travel Packages</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Personalized
+                            Itineraries</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Private &amp; Group
+                            Trips</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Trip Advisory</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Personal Travel
+                            Assistance</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Stay Connected</h4>
+                        <p class="text-white mb-3" style="line-height: 1.6;">
+                            <span class="fw-bold">Grand Global Travels</span><br>
+                            &#128222; 09035730021 &nbsp;|&nbsp; &#128247; @grand_globaltravels &nbsp;|&nbsp; &#9993;
+                            grandglobaltravels@gmail.com
+                        </p>
+                        <div class="position-relative mx-auto rounded-pill">
+                            <input id="newsletterEmail" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="email"
+                                placeholder="Your email for travel inspo">
+                            <button type="button" onclick="handleNewsletterSubscribe()"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="index.html" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Grand Global Travels</a>, Where Every
+                        Journey Feels Like Home.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    &copy; 2026 Grand Global Travels. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Service details data
+        const serviceData = {
+            visa: {
+                title: "Visa Application Services",
+                heading: "Hassle-Free Visa Application",
+                subtitle: "Professional Visa Assistance",
+                image: "img/service-2.jpg",
+                description: "Our visa application service simplifies the entire process. We handle document verification, appointment scheduling, and complete follow-up.",
+                details: "We specialize in tourist visas, business visas, transit visas, and Schengen visas for European travel. Our expert consultants guide you through every step.",
+                features: [
+                    "Document verification and preparation",
+                    "Application form assistance",
+                    "Interview preparation",
+                    "Appointment scheduling",
+                    "Status tracking",
+                    "Visa approval assistance"
+                ]
+            },
+            flight: {
+                title: "Flight Booking Services",
+                heading: "Global Flight Booking",
+                subtitle: "Competitive Fares Worldwide",
+                image: "img/service-1.jpg",
+                description: "Find and book flights to any destination worldwide with our comprehensive flight booking service. We offer competitive fares and flexible options.",
+                details: "From domestic to international flights, we compare options across multiple airlines to find you the best deals. We also offer group bookings and private charters.",
+                features: [
+                    "Competitive fares comparison",
+                    "Domestic and international flights",
+                    "Group booking discounts",
+                    "Private charter options",
+                    "Flexible booking policies",
+                    "24/7 customer support"
+                ]
+            },
+            hotel: {
+                title: "Hotel Booking Services",
+                heading: "Luxury Hotel Accommodations",
+                subtitle: "Stay in Comfort",
+                image: "img/service-3.jpg",
+                description: "Book accommodations from budget-friendly to luxury hotels worldwide. We partner with the best hotels to offer you exclusive rates and amenities.",
+                details: "Get access to exclusive hotel deals and rewards. Our travel experts can recommend the best hotels based on your preferences and budget.",
+                features: [
+                    "Worldwide hotel selection",
+                    "Exclusive rates and discounts",
+                    "Loyalty program integration",
+                    "Free cancellation options",
+                    "Room upgrades available",
+                    "24/7 concierge service"
+                ]
+            },
+            packages: {
+                title: "Customized Travel Packages",
+                heading: "Tailored Travel Experiences",
+                subtitle: "Your Perfect Journey Awaits",
+                image: "img/service-4.jpg",
+                description: "Create your perfect vacation with our customized travel packages. From beach getaways to adventure tours, we design packages to match your style.",
+                details: "Our travel consultants work with you to create personalized itineraries. Every package includes flights, accommodations, and curated experiences.",
+                features: [
+                    "Personalized itinerary design",
+                    "All-inclusive packages",
+                    "Guided tours and activities",
+                    "Accommodation options",
+                    "Travel insurance included",
+                    "Post-travel support"
+                ]
+            }
+        };
+
+        // Get service from URL parameter
+        function getServiceFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('service') || 'flight';
+        }
+
+        // Load service details
+        function loadServiceDetails() {
+            const service = getServiceFromURL();
+            const data = serviceData[service] || serviceData.flight;
+
+            document.getElementById('serviceTitle').textContent = data.title;
+            document.getElementById('serviceSubtitle').textContent = data.subtitle;
+            document.getElementById('serviceImage').src = data.image;
+            document.getElementById('serviceHeading').textContent = data.heading;
+            document.getElementById('serviceDescription').textContent = data.description;
+            document.getElementById('serviceDetails').textContent = data.details;
+
+            // Load features
+            const featuresList = document.getElementById('serviceFeatures');
+            featuresList.innerHTML = '';
+            data.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresList.appendChild(li);
+            });
+        }
+
+        // Load details on page load
+        document.addEventListener('DOMContentLoaded', loadServiceDetails);
+
+        // Newsletter subscribe
+        function handleNewsletterSubscribe() {
+            const input = document.getElementById('newsletterEmail');
+            const email = input ? input.value.trim() : '';
+            if (!email || !email.includes('@')) {
+                showToast('Please enter a valid email address.', 'error');
+                return;
+            }
+            saveSubscriber(email)
+                .then(() => {
+                    showToast('Welcome to the club! ✈️', 'success');
+                    if (input) input.value = '';
+                })
+                .catch(() => showToast('Subscription failed.', 'error'));
+        }
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>

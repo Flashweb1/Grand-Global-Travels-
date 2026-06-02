@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grand Global Travels – Where Every Journey Feels Like Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="Grand Global Travels, Visa Packages, Flight Booking, Hotel Booking, Travel Packages, Personalized Itineraries, Private Trips"
+        name="keywords">
+    <meta
+        content="Grand Global Travels – premium travel consultancy offering visa guidance, flight & hotel bookings, curated travel packages, and personalized itineraries worldwide."
+        name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logoicon.png">
+    <link rel="shortcut icon" href="img/logoicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet (keep original path) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ========== Grand Global Travels – Navy & Gold Palette ========== */
+        :root {
+            --gg-navy: #0B1F5B;
+            /* primary navy */
+            --gg-gold: #D4AF37;
+            /* prestige gold */
+            --gg-navy-deep: #071440;
+            /* deep navy for footer/copyright */
+            --gg-sand: #F5F0E8;
+            /* warm cream background */
+            --gg-charcoal: #1A2340;
+            /* dark text */
+            --gg-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gg-charcoal);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Navbar brand text */
+        .navbar-brand-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.15rem;
+            line-height: 1.2;
+            color: var(--gg-navy);
+        }
+
+        .navbar-brand-text span {
+            color: var(--gg-gold);
+        }
+
+        /* Primary buttons */
+        .btn-primary {
+            background-color: var(--gg-navy) !important;
+            border-color: var(--gg-gold) !important;
+            color: white !important;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gg-gold) !important;
+            border-color: var(--gg-navy) !important;
+            color: var(--gg-navy) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--gg-navy) !important;
+        }
+
+        .text-secondary,
+        .sub-title,
+        .btn-outline-light:hover i {
+            color: var(--gg-gold) !important;
+        }
+
+        .border-secondary {
+            border-color: var(--gg-gold) !important;
+        }
+
+        .container-fluid.bg-primary {
+            background-color: var(--gg-navy) !important;
+        }
+
+        .copyright {
+            background: var(--gg-navy-deep);
+        }
+
+        .service-title-name .bg-primary {
+            background: var(--gg-navy) !important;
+        }
+
+        .service-title-name .bg-primary a {
+            color: white !important;
+        }
+
+        .fa-star,
+        .fas.fa-star,
+        .text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .fa-check-circle.text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .footer h4.text-secondary {
+            color: var(--gg-gold) !important;
+        }
+
+        .footer a,
+        .footer p {
+            transition: 0.2s;
+        }
+
+        .gg-contact-compact {
+            background: var(--gg-sand);
+            border-left: 5px solid var(--gg-gold);
+            font-size: 1.1rem;
+            border-radius: 40px !important;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: var(--gg-sand);
+            color: var(--gg-navy);
+        }
+
+        .btn.btn-primary.btn-lg-square {
+            background-color: var(--gg-navy) !important;
+            border-color: var(--gg-gold) !important;
+        }
+
+        .btn.btn-primary.btn-lg-square:hover {
+            background-color: var(--gg-gold) !important;
+            color: var(--gg-navy) !important;
+        }
+
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: var(--gg-gold) !important;
+        }
+
+        .office-item {
+            border-bottom: 3px solid transparent;
+            transition: 0.2s;
+        }
+
+        .office-item:hover {
+            border-bottom-color: var(--gg-gold);
+        }
+
+        /* Booking widget uses gold for active tabs */
+        .qb-tab:hover,
+        .qb-tab.active {
+            background: var(--gg-gold) !important;
+            border-color: var(--gg-gold) !important;
+            color: var(--gg-navy) !important;
+        }
+
+        .btn-book-now {
+            background: linear-gradient(135deg, var(--gg-gold), #e8c84a) !important;
+            color: var(--gg-navy) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+                <div class="d-flex">
+                    <a href="mailto:grandglobaltravels@gmail.com" class="text-white me-4"><i
+                            class="fas fa-envelope text-secondary me-2"></i>grandglobaltravels@gmail.com</a>
+                    <a href="tel:+2349035730021" class="text-white me-0"><i
+                            class="fas fa-phone-alt text-secondary me-2"></i>09035730021</a>
+                </div>
+            </div>
+            <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                        href="https://instagram.com/grand_globaltravels" target="_blank"><i
+                            class="fab fa-instagram fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2"
+                        href="https://tiktok.com/@grand_globaltravels" target="_blank"><i
+                            class="fab fa-tiktok fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="#"><i
+                            class="fab fa-facebook-f fw-normal text-secondary"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href="#"><i
+                            class="fab fa-twitter fw-normal text-secondary"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="service.html" class="text-white me-2">Services</a><small class="text-white"> / </small>
+                    <a href="contact.html" class="text-white mx-2">Support</a><small class="text-white"> / </small>
+                    <a href="booking.html" class="text-white ms-2">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/newlogo.png" alt="Grand Global Travels Logo" style="max-height: 50px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="about.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">About Us</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="about.html" class="dropdown-item">Our Story</a>
+                            <a href="office.html" class="dropdown-item">Our Offices</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                        </div>
+                    </div>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="#" onclick="redirectToAuth('booking.html')"
+                    class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0 ms-lg-3">Book
+                    a Trip</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="carousel-header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="img/carousel-1.jpg" class="img-fluid" alt="Luxury travel">
+                    <div class="carousel-caption">
+                        <div class="text-center p-4" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp"
+                                data-wow-delay="0.1s">Seamless &bull; Trusted &bull; Worldwide</h4>
+                            <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp"
+                                data-wow-delay="0.3s">Where Every Journey Feels Like Home</h1>
+                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
+                                Seamless travel experiences &mdash; from visa guidance to curated trips worldwide.
+                            </p>
+                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 me-3 wow fadeInUp"
+                                data-wow-delay="0.7s" href="#" onclick="redirectToAuth('booking.html')">Book Your Trip</a>
+                            <a class="btn btn-outline-light rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.8s"
+                                href="service.html">Explore Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid" alt="Premium travel">
+                    <div class="carousel-caption">
+                        <div class="text-center p-4" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp"
+                                data-wow-delay="0.1s">Visa &bull; Flights &bull; Hotels &bull; tours and Travels  &bull; Packages </h5>
+                            <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp"
+                                data-wow-delay="0.3s">Grand Global Travels</h1>
+                            <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">
+                                Grand Global Travels makes travel seamless, comfortable, and unforgettable.
+                                From dream destinations to personalized itineraries, we handle every detail with care
+                                and precision.
+                            </p>
+                            <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5 wow fadeInUp"
+                                data-wow-delay="0.7s" href="contact.html">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-secondary wow fadeInLeft" data-wow-delay="0.2s"
+                    aria-hidden="false"></span>
+                <span class="visually-hidden-focusable">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-secondary wow fadeInRight" data-wow-delay="0.2s"
+                    aria-hidden="false"></span>
+                <span class="visually-hidden-focusable">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- ===== Quick Booking Widget Start ===== -->
+    <style>
+        .quick-booking-section {
+            background: white;
+            position: relative;
+            z-index: 20;
+            padding: 0 0 20px;
+        }
+
+        .quick-booking-wrapper {
+            background: linear-gradient(135deg, var(--gg-navy) 0%, #1a6b7a 100%);
+            border-radius: 28px;
+            padding: 36px 40px;
+            box-shadow: 0 20px 60px rgba(15, 78, 90, 0.25);
+            margin-top: -40px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .quick-booking-wrapper {
+                padding: 24px 18px;
+                margin-top: 0;
+                border-radius: 0;
+            }
+        }
+
+        .quick-booking-wrapper h3 {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+
+        .quick-booking-wrapper p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.88rem;
+            margin-bottom: 0;
+        }
+
+        .qb-form .form-control,
+        .qb-form .form-select {
+            border: none;
+            border-radius: 12px;
+            padding: 13px 16px;
+            font-size: 0.92rem;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.96);
+            color: #2c3e4c;
+        }
+
+        .qb-form .form-control:focus,
+        .qb-form .form-select:focus {
+            box-shadow: 0 0 0 3px rgba(199, 169, 100, 0.4);
+        }
+
+        .qb-form label {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .btn-book-now {
+            background: linear-gradient(135deg, var(--gg-gold), #e0c270);
+            border: none;
+            color: var(--gg-navy);
+            font-weight: 800;
+            border-radius: 14px;
+            height: 50px;
+            font-size: 0.95rem;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(199, 169, 100, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-book-now:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(199, 169, 100, 0.5);
+            background: linear-gradient(135deg, #e0c270, var(--damarc-gold));
+        }
+
+        .qb-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 0 8px;
+            align-self: stretch;
+        }
+
+        .qb-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+
+        .qb-tab {
+            padding: 7px 16px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: rgba(255, 255, 255, 0.07);
+            text-decoration: none;
+        }
+
+        .qb-tab:hover,
+        .qb-tab.active {
+            background: var(--gg-gold);
+            border-color: var(--gg-gold);
+            color: var(--gg-navy);
+        }
+    </style>
+    <div class="quick-booking-section">
+        <div class="container">
+            <div class="quick-booking-wrapper wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row align-items-center mb-3">
+                    <div class="col-md-8">
+                        <h3>✈ Quick Trip Booking</h3>
+                        <p>Tell us where you want to go – we'll handle everything else.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                        <span style="color:rgba(255,255,255,0.6); font-size:0.8rem;"><i class="fas fa-shield-alt me-1"
+                                style="color:var(--gg-gold);"></i> Secure · <i class="fas fa-headset me-1"
+                                style="color:var(--gg-gold);"></i> 2hr reply</span>
+                    </div>
+                </div>
+
+                <!-- Trip type tabs -->
+                <div class="qb-tabs">
+                    <a href="booking.html" class="qb-tab active">✈️ Flight + Hotel</a>
+                    <a href="booking.html" class="qb-tab">🛂 Visa Package</a>
+                    <a href="booking.html" class="qb-tab">👑 Luxury Escape</a>
+                    <a href="booking.html" class="qb-tab">🎒 Travel Package</a>
+                    <a href="booking.html" class="qb-tab">💼 Business Travel</a>
+                </div>
+
+                <form class="qb-form" onsubmit="quickBookSubmit(event)">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-6 col-md-3">
+                            <label><i class="fas fa-plane-departure me-1"></i> From</label>
+                            <input type="text" id="qbFrom" class="form-control" placeholder="Lagos, Nigeria">
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <label><i class="fas fa-plane-arrival me-1"></i> To</label>
+                            <input type="text" id="qbTo" class="form-control" placeholder="Dubai, Paris...">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <label><i class="fas fa-calendar me-1"></i> Departure</label>
+                            <input type="date" id="qbDate" class="form-control">
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <label><i class="fas fa-users me-1"></i> Travellers</label>
+                            <select id="qbTravellers" class="form-select">
+                                <option>1 Adult</option>
+                                <option>2 Adults</option>
+                                <option>3 Adults</option>
+                                <option>Family (4+)</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <label style="opacity:0;">.</label>
+                            <button type="button" class="btn-book-now" onclick="handleQuickBookSearch(event)">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Global Auth Redirect Helper
+        function redirectToAuth(returnPage) {
+            sessionStorage.setItem('authReturnUrl', returnPage);
+            window.location.href = 'auth.html';
+        }
+
+        // Handle quick book search - validate and redirect to auth
+        function handleQuickBookSearch(e) {
+            e.preventDefault();
+            const from = document.getElementById('qbFrom').value.trim();
+            const to = document.getElementById('qbTo').value.trim();
+            const date = document.getElementById('qbDate').value;
+            const pax = document.getElementById('qbTravellers').value;
+
+            if (!from || !to || !date) {
+                showToast('Please fill in all search fields.', 'error');
+                return;
+            }
+
+            // Store in sessionStorage so booking.html can pre-fill
+            sessionStorage.setItem('qb_from', from);
+            sessionStorage.setItem('qb_to', to);
+            sessionStorage.setItem('qb_date', date);
+            sessionStorage.setItem('qb_pax', pax);
+            
+            // Redirect to auth page instead of booking page directly
+            sessionStorage.setItem('authReturnUrl', 'booking.html');
+            window.location.href = 'auth.html';
+        }
+
+        // Set today as min
+        (function () {
+            const d = document.getElementById('qbDate');
+            if (d) d.min = new Date().toISOString().split('T')[0];
+        })();
+    </script>
+    <!-- ===== Quick Booking Widget End ===== -->
+
+    <!-- About Start -->
+    <div id="about" class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="bg-light rounded">
+                        <img src="img/about-2.png" class="img-fluid w-100" style="margin-bottom: -7px;"
+                            alt="Grand Global Travels">
+                        <img src="img/about-3.jpg" class="img-fluid w-100 border-bottom border-5 border-primary"
+                            style="border-top-right-radius: 300px; border-top-left-radius: 300px;"
+                            alt="Happy travellers">
+                    </div>
+                </div>
+                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h5 class="sub-title pe-3 text-secondary">Grand Global Travels</h5>
+                    <h1 class="display-5 mb-4">Where Every Journey Feels Like Home.</h1>
+                    <p class="mb-4">We are a premium travel consultancy committed to delivering seamless, comfortable,
+                        and unforgettable travel experiences. From dream destinations to personalized itineraries,
+                        we handle every detail with care and precision &mdash; so you can focus on the journey.</p>
+                    <div class="row gy-4 align-items-center">
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                            <i class="fas fa-globe-americas fa-3x text-secondary"></i>
+                            <h5 class="ms-4">Global reach, local expertise</h5>
+                        </div>
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                            <i class="fas fa-gem fa-3x text-secondary"></i>
+                            <h5 class="ms-4">Luxury &amp; bespoke itineraries</h5>
+                        </div>
+                        <div class="col-4 col-md-3">
+                            <div class="bg-light text-center rounded p-3">
+                                <div class="mb-2">
+                                    <i class="fas fa-suitcase-rolling fa-4x text-primary"></i>
+                                </div>
+                                <h1 class="display-5 fw-bold mb-2">500+</h1>
+                                <p class="text-muted mb-0">Trips curated</p>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-9">
+                            <div class="mb-5">
+                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
+                                    100% transparent &amp; stress-free</p>
+                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
+                                    Fast, reliable execution</p>
+                                <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i>
+                                    Personalized for your budget &amp; style</p>
+                            </div>
+                            <div class="d-flex flex-wrap">
+                                <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                                    <a href="tel:+2349035730021" class="position-relative wow tada"
+                                        data-wow-delay=".9s">
+                                        <i class="fa fa-phone-alt text-primary fa-3x"></i>
+                                        <div class="position-absolute" style="top: 0; left: 25px;">
+                                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <span class="text-primary">Speak with our travel experts</span>
+                                    <span class="text-secondary fw-bold fs-5"
+                                        style="letter-spacing: 2px;">09035730021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Services Start -->
+    <div id="services" class="container-fluid service overflow-hidden py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h5 class="sub-title text-primary px-3">WHAT WE OFFER</h5>
+                </div>
+                <h1 class="display-5 mb-4">Our Travel Services</h1>
+                <p class="mb-0">From visa guidance to luxury getaways &mdash; complete, curated, and handled with
+                    precision.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1: Visa Application -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-1.jpg" class="img-fluid w-100 rounded"
+                                    alt="Visa Application"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=visa" class="h4 text-white mb-0">&#128211; Visa Application</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=visa">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=visa">
+                                        <h4 class="text-white mb-4 py-3">Hassle-free visas</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">Professional documentation guidance and submission support for
+                                            tourist, business, transit &amp; Schengen visas.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=visa">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2: Flight Booking -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-2.jpg" class="img-fluid w-100 rounded"
+                                    alt="Flight Booking"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=flight" class="h4 text-white mb-0">&#9992; Flight Booking</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=flight">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=flight">
+                                        <h4 class="text-white mb-4 py-3">Best fares, globally</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">Competitive fares and flexible options worldwide. Economy,
+                                            business, or first class &mdash; we find the best seat for you.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=flight">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3: Hotel Booking -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-3.jpg" class="img-fluid w-100 rounded"
+                                    alt="Hotel Booking"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=hotel" class="h4 text-white mb-0">&#127970; Hotel Booking</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=hotel">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=hotel">
+                                        <h4 class="text-white mb-4 py-3">Comfort assured</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">Carefully selected accommodations for comfort and convenience.
+                                            Budget-friendly to 5-star luxury.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=hotel">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4: Travel Packages -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-1.jpg" class="img-fluid w-100 rounded"
+                                    alt="Travel Packages"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=packages" class="h4 text-white mb-0">&#127956; Travel Packages</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=packages">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=packages">
+                                        <h4 class="text-white mb-4 py-3">All-in-one deals</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">All-in-one curated experiences: flights, hotels, transfers &amp;
+                                            activities &mdash; for families, couples, and solo explorers.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=packages">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5: Personalized Itineraries -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-2.jpg" class="img-fluid w-100 rounded"
+                                    alt="Personalized Itineraries"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=packages" class="h4 text-white mb-0">&#128204; Itineraries</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=packages">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=packages">
+                                        <h4 class="text-white mb-4 py-3">100% tailored</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">Trips designed around your schedule, budget, and preferences
+                                            &mdash; down to the hour. Your dream trip, built by experts.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=packages">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6: Private & Group Trips -->
+                <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="service-inner">
+                            <div class="service-img"><img src="img/service-3.jpg" class="img-fluid w-100 rounded"
+                                    alt="Private & Group Trips"></div>
+                            <div class="service-title">
+                                <div class="service-title-name">
+                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                        <a href="service-details.html?service=packages" class="h4 text-white mb-0">&#128101; Private &amp;
+                                            Group</a>
+                                    </div>
+                                    <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4"
+                                        href="service-details.html?service=packages">Learn More</a>
+                                </div>
+                                <div class="service-content pb-4">
+                                    <a href="service-details.html?service=packages">
+                                        <h4 class="text-white mb-4 py-3">Your crew, your rules</h4>
+                                    </a>
+                                    <div class="px-4">
+                                        <p class="mb-4">Tailored experiences for individuals, families, and
+                                            organizations. Private getaways or group adventures &mdash; we handle it
+                                            all.</p>
+                                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5"
+                                            href="service-details.html?service=packages">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial overflow-hidden py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h5 class="sub-title text-primary px-3">TRUSTED BY TRAVELLERS</h5>
+                </div>
+                <h1 class="display-5 mb-4">What Our Clients Say</h1>
+                <p class="mb-0">Real stories from travellers who journeyed seamlessly with Grand Global Travels.</p>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
+                <div class="testimonial-item">
+                    <div class="testimonial-content p-4 mb-5">
+                        <p class="fs-5 mb-0"><i class="fas fa-quote-left text-secondary me-2"></i>Grand Global Travels
+                            handled every detail of our Dubai family trip &mdash; from flights to hotel to itinerary.
+                            Absolutely seamless and stress-free!<i class="fas fa-quote-right text-secondary ms-2"></i>
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
+                            <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="Adebayo O.">
+                        </div>
+                        <div class="my-auto">
+                            <h5>Adebayo O.</h5>
+                            <p class="mb-0">Family traveller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content p-4 mb-5">
+                        <p class="fs-5 mb-0"><i class="fas fa-quote-left text-secondary me-2"></i>I needed a Schengen
+                            visa on short notice for a business conference. Grand Global Travels secured the appointment
+                            and documentation in record time. Truly reliable.<i
+                                class="fas fa-quote-right text-secondary ms-2"></i>
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
+                            <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="Chioma N.">
+                        </div>
+                        <div class="my-auto">
+                            <h5>Chioma N.</h5>
+                            <p class="mb-0">Business professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content p-4 mb-5">
+                        <p class="fs-5 mb-0"><i class="fas fa-quote-left text-secondary me-2"></i>Our honeymoon
+                            itinerary was pure magic &mdash; they even arranged a private beachside dinner at sunset.
+                            Worth every naira. Grand Global Travels is now our go-to for all trips!<i
+                                class="fas fa-quote-right text-secondary ms-2"></i>
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                            <i class="fas fa-star text-secondary"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
+                            <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" alt="Michael & Sarah">
+                        </div>
+                        <div class="my-auto">
+                            <h5>Michael &amp; Sarah</h5>
+                            <p class="mb-0">Honeymooners</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Contact Start -->
+    <div id="contact" class="container-fluid contact overflow-hidden py-5">
+        <div class="container pb-5">
+            <div class="office">
+                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h5 class="sub-title text-primary px-3">WE'RE HERE FOR YOU</h5>
+                    </div>
+                    <h1 class="display-5 mb-4">Contact Grand Global Travels</h1>
+                    <p class="mb-4">Whether you're planning a leisure escape, a business trip, or a luxury retreat
+                        &mdash;
+                        reach out. We respond within hours.</p>
+                    <div class="gg-contact-compact p-4 text-center mx-auto"
+                        style="max-width: 800px; border-radius: 50px;">
+                        <p class="fs-4 fw-bold mb-2" style="color:var(--gg-navy);">Grand Global Travels</p>
+                        <p class="mb-1"><i class="fas fa-phone-alt text-secondary me-2"></i> 09035730021 &nbsp;|&nbsp;
+                            <i class="fab fa-instagram text-secondary me-2"></i> @grand_globaltravels &nbsp;|&nbsp; <i
+                                class="fas fa-envelope text-secondary me-2"></i> grandglobaltravels@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-2.jpg" class="img-fluid w-100 rounded" alt="Call us">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">&#128222; Phone / WhatsApp</h4>
+                                <a href="tel:+2349035730021" class="text-secondary fs-5 mb-2">09035730021</a>
+                                <p class="text-muted mb-0">Available Mon&ndash;Sat, 9am&ndash;7pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-1.jpg" class="img-fluid w-100 rounded" alt="Instagram">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">&#128247; Instagram &amp; TikTok</h4>
+                                <a href="https://instagram.com/grand_globaltravels" target="_blank"
+                                    class="text-secondary fs-5 mb-2">@grand_globaltravels</a>
+                                <p class="text-muted mb-0">DM us for quick inquiries, stories &amp; updates</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-3.jpg" class="img-fluid w-100 rounded" alt="Email">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">&#9993; Email</h4>
+                                <a href="mailto:grandglobaltravels@gmail.com"
+                                    class="text-secondary fs-5 mb-2 text-break">grandglobaltravels@gmail.com</a>
+                                <p class="text-muted mb-0">For itineraries, quotes &amp; partnerships</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="office-item p-4">
+                            <div class="office-img mb-4">
+                                <img src="img/office-4.jpg" class="img-fluid w-100 rounded" alt="Headquarters">
+                            </div>
+                            <div class="office-content d-flex flex-column">
+                                <h4 class="mb-2">&#128205; Nigeria (HQ)</h4>
+                                <p class="text-muted fs-5 mb-2">Lagos, Nigeria &ndash; serving globally</p>
+                                <p class="mb-0">We manage travel to any destination worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Grand Global Travels</h4>
+                        <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Lagos, Nigeria &ndash; worldwide</a>
+                        <a href="mailto:grandglobaltravels@gmail.com"><i class="fas fa-envelope me-2"></i>
+                            grandglobaltravels@gmail.com</a>
+                        <a href="tel:+2349035730021"><i class="fas fa-phone me-2"></i> 09035730021</a>
+                        <a href="https://instagram.com/grand_globaltravels" target="_blank" class="mb-3"><i
+                                class="fab fa-instagram me-2"></i> @grand_globaltravels</a>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-secondary me-2"></i>
+                            <a class="btn mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn mx-1" href="https://instagram.com/grand_globaltravels" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn mx-1" href="https://tiktok.com/@grand_globaltravels" target="_blank"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Opening Hours</h4>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Mon &ndash; Friday:</h6>
+                            <p class="text-white mb-0">09.00 am &ndash; 07.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Saturday:</h6>
+                            <p class="text-white mb-0">10.00 am &ndash; 05.00 pm</p>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-muted mb-0">Sunday:</h6>
+                            <p class="text-white mb-0">Closed (online inquiries welcome)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-secondary mb-4">Our Services</h4>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Visa Application</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Flight Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Hotel Booking</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Travel Packages</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Personalized
+                            Itineraries</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Private &amp; Group
+                            Trips</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Trip Advisory</a>
+                        <a href="service.html" class=""><i class="fas fa-angle-right me-2"></i> Personal Travel
+                            Assistance</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+                        <h4 class="text-secondary mb-4">Stay Connected</h4>
+                        <p class="text-white mb-3" style="line-height: 1.6;">
+                            <span class="fw-bold">Grand Global Travels</span><br>
+                            &#128222; 09035730021 &nbsp;|&nbsp; &#128247; @grand_globaltravels &nbsp;|&nbsp; &#9993;
+                            grandglobaltravels@gmail.com
+                        </p>
+                        <div class="position-relative mx-auto rounded-pill">
+                            <input id="newsletterEmail" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="email"
+                                placeholder="Your email for travel inspo">
+                            <button type="button" onclick="handleNewsletterSubscribe()"
+                                class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-white"><a href="index.html" class="border-bottom text-white"><i
+                                class="fas fa-copyright text-light me-2"></i>Grand Global Travels</a>, Where Every
+                        Journey Feels Like Home.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white">
+                    &copy; 2026 Grand Global Travels. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- Firebase SDKs (compat v9) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+    <script src="js/firebase-app.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #D4AF37;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #D4AF37;
+            color: #0B1F5B;
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 15px 35px rgba(18, 140, 126, 0.5);
+            animation: none;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 110px;
+            left: 30px;
+            background-color: var(--gg-navy);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 1px solid var(--gg-gold);
+            pointer-events: none;
+        }
+
+        .whatsapp-tooltip:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 25px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: var(--gg-navy) transparent transparent transparent;
+        }
+
+        .whatsapp-float:hover+.whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 30px;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+    </style>
+    <a href="https://wa.me/2349035730021?text=Hello%21%20I%27m%20interested%20in%20Grand%20Global%20Travels%20services.%20I%20need%20assistance%20with%3A"
+        class="whatsapp-float" target="_blank" aria-label="Chat with Grand Global Travels on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-tooltip">&#128242; Chat with us &bull; Fast reply</div>
+
+    <script>
+        // Newsletter subscribe
+        function handleNewsletterSubscribe() {
+            const input = document.getElementById('newsletterEmail');
+            const email = input ? input.value.trim() : '';
+            if (!email || !email.includes('@')) {
+                showToast('Please enter a valid email address.', 'error');
+                return;
+            }
+            saveSubscriber(email)
+                .then(() => {
+                    showToast('You\'re subscribed! ✈️ Welcome to Grand Global Travels.', 'success');
+                    if (input) input.value = '';
+                })
+                .catch(() => showToast('Subscription failed. Please try again.', 'error'));
+        }
+    </script>
+
+</body>
+
+</html>

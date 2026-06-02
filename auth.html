@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login / Signup - Grand Global Travels</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Login or create an account with Grand Global Travels">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logoicon.png">
+    <link rel="shortcut icon" href="img/logoicon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --gg-navy: #0B1F5B;
+            --gg-gold: #D4AF37;
+            --gg-sand: #F5F0E8;
+            --gg-charcoal: #1A2340;
+            --gg-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gg-charcoal);
+            background: linear-gradient(135deg, var(--gg-navy) 0%, #1a3a5c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .auth-container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .auth-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .auth-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .auth-left {
+                display: none;
+            }
+        }
+
+        .auth-left {
+            background: linear-gradient(135deg, var(--gg-navy) 0%, #0f2d4a 100%);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-left::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 500px;
+            height: 500px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .auth-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .auth-left p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .auth-left .feature-item {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .auth-left .feature-item i {
+            color: var(--gg-gold);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .auth-left .feature-item span {
+            font-size: 0.95rem;
+        }
+
+        .auth-right {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-section img {
+            max-height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .auth-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .auth-tab {
+            padding: 12px 20px;
+            border: none;
+            background: none;
+            color: #999;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            bottom: -2px;
+        }
+
+        .auth-tab.active {
+            color: var(--gg-navy);
+            border-bottom-color: var(--gg-gold);
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--gg-charcoal);
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gg-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-group.checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group.checkbox input {
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .form-group.checkbox label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--gg-navy) 0%, #0f2d4a 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(11, 31, 91, 0.2);
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e5e5e5;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 10px;
+            color: #999;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e5e5e5;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .social-btn:hover {
+            border-color: var(--gg-gold);
+            color: var(--gg-navy);
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        .footer-text a {
+            color: var(--gg-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-wrapper">
+            <!-- Left Side -->
+            <div class="auth-left">
+                <h2>Welcome Back!</h2>
+                <p>Plan your next adventure with Grand Global Travels. From visa guidance to curated trips, we've got everything you need for a seamless journey.</p>
+
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Secure booking & 24/7 support</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Best prices & exclusive deals</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Personalized travel plans</span>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="auth-right">
+                <div class="logo-section">
+                    <img src="img/newlogo.png" alt="Grand Global Travels">
+                </div>
+
+                <!-- Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" onclick="switchTab('login')">
+                        <i class="fas fa-sign-in-alt me-2"></i> Login
+                    </button>
+                    <button class="auth-tab" onclick="switchTab('signup')">
+                        <i class="fas fa-user-plus me-2"></i> Sign Up
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="rememberMe" checked>
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <button type="submit" id="loginBtn" class="submit-btn">Sign In</button>
+
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn" onclick="socialLogin('google')">
+                            <i class="fab fa-google me-2"></i> Google
+                        </button>
+                        <button type="button" class="social-btn" onclick="socialLogin('facebook')">
+                            <i class="fab fa-facebook me-2"></i> Facebook
+                        </button>
+                    </div>
+
+                    <div class="footer-text">
+                        Don't have an account? <a href="#" onclick="switchTab('signup')">Sign up here</a>
+                    </div>
+                </form>
+
+                <!-- Signup Form -->
+                <form class="auth-form" id="signupForm" onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPhone">Phone Number</label>
+                        <input type="tel" id="signupPhone" placeholder="+234 (0) 903 ..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupConfirm">Confirm Password</label>
+                        <input type="password" id="signupConfirm" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">I agree to the <a href="#" style="color: var(--gg-gold);">Terms & Conditions</a></label>
+                    </div>
+
+                    <button type="submit" id="signupBtn" class="submit-btn">Create Account</button>
+
+                    <div class="divider">
+                        <span>Or sign up with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn" onclick="socialLogin('google')">
+                            <i class="fab fa-google me-2"></i> Google
+                        </button>
+                        <button type="button" class="social-btn" onclick="socialLogin('facebook')">
+                            <i class="fab fa-facebook me-2"></i> Facebook
+                        </button>
+                    </div>
+
+                    <div class="footer-text">
+                        Already have an account? <a href="#" onclick="switchTab('login')">Sign in here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDKs (compat v9) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+    <script src="js/firebase-app.js"></script>
+
+    <script>
+        const returnUrl = sessionStorage.getItem('authReturnUrl') || 'booking.html';
+
+        // ── Helper: set button loading state ─────────────────────────────────
+        function setLoading(btnId, loading) {
+            const btn = document.getElementById(btnId);
+            if (!btn) return;
+            btn.disabled = loading;
+            btn.textContent = loading ? 'Please wait…' : btn.dataset.label;
+        }
+
+        // Store button labels once DOM loads
+        document.addEventListener('DOMContentLoaded', () => {
+            ['loginBtn', 'signupBtn'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) btn.dataset.label = btn.textContent;
+            });
+
+            // If user already signed in, redirect immediately
+            onAuthChange(user => {
+                if (user) window.location.href = returnUrl;
+            });
+        });
+
+        // ── Tab switcher ──────────────────────────────────────────────────────
+        function switchTab(tab) {
+            document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+            document.querySelectorAll('.auth-tab').forEach(b => b.classList.remove('active'));
+            if (tab === 'login') {
+                document.getElementById('loginForm').classList.add('active');
+                document.querySelectorAll('.auth-tab')[0].classList.add('active');
+            } else {
+                document.getElementById('signupForm').classList.add('active');
+                document.querySelectorAll('.auth-tab')[1].classList.add('active');
+            }
+        }
+
+        // ── Login ─────────────────────────────────────────────────────────────
+        function handleLogin(e) {
+            e.preventDefault();
+            const email    = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            setLoading('loginBtn', true);
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then(cred => {
+                    sessionStorage.setItem('user', JSON.stringify({ uid: cred.user.uid, email: cred.user.email }));
+                    showToast('Welcome back! Redirecting…', 'success');
+                    setTimeout(() => window.location.href = returnUrl, 1200);
+                })
+                .catch(err => {
+                    setLoading('loginBtn', false);
+                    const msgs = {
+                        'auth/user-not-found':     'No account found with that email.',
+                        'auth/wrong-password':     'Incorrect password. Please try again.',
+                        'auth/invalid-email':      'Please enter a valid email address.',
+                        'auth/too-many-requests':  'Too many attempts. Try again later.'
+                    };
+                    showToast(msgs[err.code] || 'Login failed. Please try again.', 'error');
+                });
+        }
+
+        // ── Sign Up ───────────────────────────────────────────────────────────
+        function handleSignup(e) {
+            e.preventDefault();
+            const name     = document.getElementById('signupName').value.trim();
+            const email    = document.getElementById('signupEmail').value.trim();
+            const phone    = document.getElementById('signupPhone').value.trim();
+            const password = document.getElementById('signupPassword').value;
+            const confirm  = document.getElementById('signupConfirm').value;
+
+            if (password !== confirm) {
+                showToast('Passwords do not match!', 'error');
+                return;
+            }
+            if (password.length < 6) {
+                showToast('Password must be at least 6 characters.', 'error');
+                return;
+            }
+
+            setLoading('signupBtn', true);
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(cred => {
+                    const uid = cred.user.uid;
+                    // Save profile to Firestore
+                    return db.collection('users').doc(uid).set({
+                        name, email, phone,
+                        createdAt: serverNow()
+                    }).then(() => cred);
+                })
+                .then(cred => {
+                    // Update Firebase display name
+                    return cred.user.updateProfile({ displayName: name }).then(() => cred);
+                })
+                .then(cred => {
+                    sessionStorage.setItem('user', JSON.stringify({ uid: cred.user.uid, email, name }));
+                    showToast('Account created! Redirecting…', 'success');
+                    setTimeout(() => window.location.href = returnUrl, 1200);
+                })
+                .catch(err => {
+                    setLoading('signupBtn', false);
+                    const msgs = {
+                        'auth/email-already-in-use': 'An account with this email already exists.',
+                        'auth/invalid-email':        'Please enter a valid email address.',
+                        'auth/weak-password':        'Password is too weak. Use at least 6 characters.'
+                    };
+                    showToast(msgs[err.code] || 'Sign-up failed. Please try again.', 'error');
+                });
+        }
+
+        // ── Google Sign-in ────────────────────────────────────────────────────
+        function socialLogin(platform) {
+            if (platform !== 'google') {
+                showToast('Only Google sign-in is available right now.', 'info');
+                return;
+            }
+            const provider = new firebase.auth.GoogleAuthProvider();
+            auth.signInWithPopup(provider)
+                .then(result => {
+                    const user = result.user;
+                    // Upsert user doc
+                    return db.collection('users').doc(user.uid).set({
+                        name:  user.displayName || '',
+                        email: user.email,
+                        phone: user.phoneNumber || '',
+                        photoURL: user.photoURL || '',
+                        lastLogin: serverNow()
+                    }, { merge: true }).then(() => user);
+                })
+                .then(user => {
+                    sessionStorage.setItem('user', JSON.stringify({ uid: user.uid, email: user.email, name: user.displayName }));
+                    showToast('Signed in with Google! Redirecting…', 'success');
+                    setTimeout(() => window.location.href = returnUrl, 1200);
+                })
+                .catch(err => {
+                    if (err.code === 'auth/popup-closed-by-user') return;
+                    showToast('Google sign-in failed. Please try again.', 'error');
+                });
+        }
+    </script>
+</body>
+
+</html>
