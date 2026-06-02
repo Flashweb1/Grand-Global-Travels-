@@ -1,0 +1,3 @@
+deployment:
+  tasks:
+    - /usr/bin/echo "cPanel Git deployment completed"
