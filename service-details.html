@@ -501,22 +501,6 @@
         // Load details on page load
         document.addEventListener('DOMContentLoaded', loadServiceDetails);
 
-        // Newsletter subscribe
-        function handleNewsletterSubscribe() {
-            const input = document.getElementById('newsletterEmail');
-            const email = input ? input.value.trim() : '';
-            if (!email || !email.includes('@')) {
-                showToast('Please enter a valid email address.', 'error');
-                return;
-            }
-            saveSubscriber(email)
-                .then(() => {
-                    showToast('Welcome to the club! ✈️', 'success');
-                    if (input) input.value = '';
-                })
-                .catch(() => showToast('Subscription failed.', 'error'));
-        }
-
         // Back to top button
         const backToTopBtn = document.querySelector('.back-to-top');
         window.addEventListener('scroll', function() {
